@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from '../assets/logo_transparent.png';
+import logoImage from '../assets/logo_v2.png';
 
 interface LogoProps {
     animated?: boolean;
