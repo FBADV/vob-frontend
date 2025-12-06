@@ -1,0 +1,88 @@
+
+> vob-alaska@0.0.0 test:e2e:run
+> cypress run
+
+
+DevTools listening on ws://127.0.0.1:59484/devtools/browser/7b08024d-1ffe-4cf4-a1cc-24a2b9a52ba1
+Warning: We failed to trash the existing run results.
+
+This error will not affect or change the exit code.
+
+Error: spawn Unknown system error -86
+    at ChildProcess.spawn (node:internal/child_process:420:11)
+    at spawn (node:child_process:800:9)
+    at execFile (node:child_process:349:17)
+    at execFile (node:child_process:245:21)
+    at execFile (node:electron/js2c/node_init:2:3936)
+    at s.exports (<embedded>:1281:1000376)
+    at s.exports (<embedded>:1281:1000977)
+    at s.exports (<embedded>:1281:1028236)
+
+/bin/sh: /Users/fred/Library/Caches/Cypress/15.7.0/Cypress.app/Contents/Resources/app/node_modules/term-size/vendor/macos/term-size: Bad CPU type in executable
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        15.7.0                                                                         │
+  │ Browser:        Electron 138 (headless)                                                        │
+  │ Node Version:   v24.11.1 (/usr/local/bin/node)                                                 │
+  │ Specs:          1 found (critical_flow.cy.ts)                                                  │
+  │ Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  critical_flow.cy.ts                                                             (1 of 1)
+
+
+  Critical Flow: Login -> Client -> Process
+    1) should complete the full flow successfully
+
+
+  0 passing (10s)
+  1 failing
+
+  1) Critical Flow: Login -> Client -> Process
+       should complete the full flow successfully:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[placeholder*="código"]`, but never found it.
+      at Context.eval (webpack://vob-alaska/./cypress/e2e/critical_flow.cy.ts:14:11)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      0                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     10 seconds                                                                       │
+  │ Spec Ran:     critical_flow.cy.ts                                                              │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /Users/fred/Library/CloudStorage/OneDrive-Pessoal/Virtual Office Brazil - VOB (V    (2560x1440)
+     ersão Alaska)/cypress/screenshots/critical_flow.cy.ts/Critical Flow Login - Cli                
+     ent - Process -- should complete the full flow successfully (failed) (22).png                  
+
+
+/bin/sh: /Users/fred/Library/Caches/Cypress/15.7.0/Cypress.app/Contents/Resources/app/node_modules/term-size/vendor/macos/term-size: Bad CPU type in executable
+================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  critical_flow.cy.ts                      00:10        1        -        1        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     00:10        1        -        1        -        -  
+

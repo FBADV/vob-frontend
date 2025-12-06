@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+certs/
+*.log
+.DS_Store
+*.pem
+*.pfx
+*.p12
+coverage/
+.nyc_output/

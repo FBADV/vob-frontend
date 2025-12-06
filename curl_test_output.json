@@ -1,0 +1,65 @@
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host api-publica.datajud.cnj.jus.br:443 was resolved.
+* IPv6: (none)
+* IPv4: 201.49.152.99
+*   Trying 201.49.152.99:443...
+* Connected to api-publica.datajud.cnj.jus.br (201.49.152.99) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [335 bytes data]
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+{ [108 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [4283 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES256-GCM-SHA384 / [blank] / UNDEF
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=cnj.jus.br
+*  start date: Oct  9 11:21:44 2025 GMT
+*  expire date: Jan  7 11:21:43 2026 GMT
+*  subjectAltName: host "api-publica.datajud.cnj.jus.br" matched cert's "*.datajud.cnj.jus.br"
+*  issuer: C=US; O=Let's Encrypt; CN=R13
+*  SSL certificate verify ok.
+* using HTTP/1.x
+> POST /api_publica_tjsp/_search HTTP/1.1
+> Host: api-publica.datajud.cnj.jus.br
+> User-Agent: curl/8.7.1
+> Accept: */*
+> Authorization: APIKey cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==
+> Content-Type: application/json
+> Content-Length: 43
+> 
+} [43 bytes data]
+* upload completely sent off: 43 bytes
+< HTTP/1.1 200 OK
+< Date: Sat, 29 Nov 2025 01:46:21 GMT
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< X-Cloud-Request-Id: VrZZUetVTjGtv9tsg5kM5A
+< X-Elastic-Product: Elasticsearch
+< X-Found-Handling-Cluster: ab77d9b257f54e4a8a2761fae16016ee
+< X-Found-Handling-Instance: instance-0000000003
+< 
+{ [3829 bytes data]
+{"took":14,"timed_out":false,"_shards":{"total":20,"successful":20,"skipped":0,"failed":0},"hits":{"total":{"value":10000,"relation":"gte"},"max_score":1.0,"hits":[{"_index":"api_publica_tjsp","_id":"TJSP_G1_10067057520208260590","_score":1.0,"_source":{"classe":{"codigo":1727,"nome":"Petição Criminal"},"numeroProcesso":"10067057520208260590","sistema":{"codigo":3,"nome":"SAJ"},"formato":{"codigo":1,"nome":"Eletrônico"},"tribunal":"TJSP","dataHoraUltimaAtualizacao":"2024-08-01T11:37:01.387Z","grau":"G1","@timestamp":"2025-11-05T06:26:11.540649231Z","dataAjuizamento":"20200806180804","movimentos":[{"complementosTabelados":[{"codigo":2,"valor":2,"nome":"sorteio","descricao":"tipo_de_distribuicao_redistribuicao"}],"codigo":26,"nome":"Distribuição","dataHora":"2020-08-06T18:34:19.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":581,"nome":"Documento","dataHora":"2020-08-10T20:34:00.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":581,"nome":"Documento","dataHora":"2020-08-10T20:35:12.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":581,"nome":"Documento","dataHora":"2020-08-10T20:36:15.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":581,"nome":"Documento","dataHora":"2020-08-10T20:41:49.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":581,"nome":"Documento","dataHora":"2020-08-10T20:45:08.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":581,"nome":"Documento","dataHora":"2020-08-10T20:48:50.000Z"},{"complementosTabelados":[{"codigo":4,"valor":107,"nome":"Certidão","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2020-08-10T20:56:54.000Z"},{"complementosTabelados":[{"codigo":3,"valor":5,"nome":"para despacho","descricao":"tipo_de_conclusao"}],"codigo":51,"nome":"Conclusão","dataHora":"2020-08-11T16:52:22.000Z"},{"codigo":11010,"nome":"Mero expediente","dataHora":"2020-08-12T17:49:36.000Z"},{"codigo":11383,"nome":"Ato ordinatório","dataHora":"2020-08-13T12:30:13.000Z"},{"complementosTabelados":[{"codigo":4,"valor":107,"nome":"Certidão","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2020-08-13T12:30:29.000Z"},{"complementosTabelados":[{"codigo":19,"valor":57,"nome":"Petição (outras)","descricao":"tipo_de_peticao"}],"codigo":85,"nome":"Petição","dataHora":"2020-08-13T15:32:31.000Z"},{"complementosTabelados":[{"codigo":3,"valor":6,"nome":"para decisão","descricao":"tipo_de_conclusao"}],"codigo":51,"nome":"Conclusão","dataHora":"2020-08-27T12:46:31.000Z"},{"codigo":11022,"nome":"Julgamento em Diligência","dataHora":"2020-08-27T14:50:17.000Z"},{"complementosTabelados":[{"codigo":4,"valor":107,"nome":"Certidão","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2020-08-27T14:50:34.000Z"},{"complementosTabelados":[{"codigo":19,"valor":57,"nome":"Petição (outras)","descricao":"tipo_de_peticao"}],"codigo":85,"nome":"Petição","dataHora":"2020-08-28T07:58:34.000Z"},{"complementosTabelados":[{"codigo":18,"valor":40,"nome":"outros motivos","descricao":"motivo_da_remessa"}],"codigo":123,"nome":"Remessa","dataHora":"2020-08-31T12:05:46.000Z"},{"codigo":92,"nome":"Publicação","dataHora":"2020-09-01T11:40:47.000Z"},{"complementosTabelados":[{"codigo":4,"valor":107,"nome":"Certidão","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2020-09-29T11:43:16.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":581,"nome":"Documento","dataHora":"2020-09-29T13:23:30.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":581,"nome":"Documento","dataHora":"2021-01-13T12:53:18.000Z"},{"codigo":11383,"nome":"Ato ordinatório","dataHora":"2021-01-13T13:43:06.000Z"},{"complementosTabelados":[{"codigo":4,"valor":107,"nome":"Certidão","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2021-01-13T13:43:20.000Z"},{"complementosTabelados":[{"codigo":19,"valor":57,"nome":"Petição (outras)","descricao":"tipo_de_peticao"}],"codigo":85,"nome":"Petição","dataHora":"2021-01-13T18:11:14.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2020-08-10T20:43:16.000Z"},{"complementosTabelados":[{"codigo":3,"valor":6,"nome":"para decisão","descricao":"tipo_de_conclusao"}],"codigo":51,"nome":"Conclusão","dataHora":"2021-02-02T18:44:43.000Z"},{"codigo":11022,"nome":"Julgamento em Diligência","dataHora":"2021-02-03T11:11:14.000Z"},{"complementosTabelados":[{"codigo":4,"valor":107,"nome":"Certidão","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2021-02-03T11:11:28.000Z"},{"complementosTabelados":[{"codigo":19,"valor":57,"nome":"Petição (outras)","descricao":"tipo_de_peticao"}],"codigo":85,"nome":"Petição","dataHora":"2021-02-03T15:30:35.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":581,"nome":"Documento","dataHora":"2021-02-03T16:51:54.000Z"},{"complementosTabelados":[{"codigo":18,"valor":40,"nome":"outros motivos","descricao":"motivo_da_remessa"}],"codigo":123,"nome":"Remessa","dataHora":"2021-02-04T12:16:55.000Z"},{"codigo":92,"nome":"Publicação","dataHora":"2021-02-05T10:14:14.000Z"},{"complementosTabelados":[{"codigo":4,"valor":107,"nome":"Certidão","descricao":"tipo_de_documento"}],"codigo":581,"nome":"Documento","dataHora":"2021-04-20T13:34:13.000Z"},{"complementosTabelados":[{"codigo":4,"valor":107,"nome":"Certidão","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2021-04-20T13:35:26.000Z"},{"complementosTabelados":[{"codigo":3,"valor":5,"nome":"para despacho","descricao":"tipo_de_conclusao"}],"codigo":51,"nome":"Conclusão","dataHora":"2021-04-20T13:36:42.000Z"},{"complementosTabelados":[{"codigo":3,"valor":6,"nome":"para decisão","descricao":"tipo_de_conclusao"}],"codigo":51,"nome":"Conclusão","dataHora":"2021-04-26T11:32:50.000Z"},{"codigo":12164,"nome":"Outras Decisões","dataHora":"2021-04-26T14:40:12.000Z"},{"complementosTabelados":[{"codigo":4,"valor":107,"nome":"Certidão","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2021-06-18T17:49:53.000Z"},{"complementosTabelados":[{"codigo":18,"valor":40,"nome":"outros motivos","descricao":"motivo_da_remessa"}],"codigo":123,"nome":"Remessa","dataHora":"2021-06-18T17:51:13.000Z"},{"complementosTabelados":[{"codigo":18,"valor":40,"nome":"outros motivos","descricao":"motivo_da_remessa"}],"codigo":982,"nome":"Remessa","dataHora":"2021-06-18T17:53:31.000Z"},{"codigo":132,"nome":"Recebimento","dataHora":"2021-06-21T17:51:11.000Z"},{"complementosTabelados":[{"codigo":2,"valor":2,"nome":"sorteio","descricao":"tipo_de_distribuicao_redistribuicao"}],"codigo":36,"nome":"Redistribuição","dataHora":"2021-06-21T17:51:11.000Z"},{"complementosTabelados":[{"codigo":3,"valor":5,"nome":"para despacho","descricao":"tipo_de_conclusao"}],"codigo":51,"nome":"Conclusão","dataHora":"2021-06-22T10:33:35.000Z"},{"codigo":11010,"nome":"Mero expediente","dataHora":"2021-06-22T20:25:49.000Z"},{"complementosTabelados":[{"codigo":18,"valor":40,"nome":"outros motivos","descricao":"motivo_da_remessa"}],"codigo":123,"nome":"Remessa","dataHora":"2021-06-28T09:32:49.000Z"},{"codigo":92,"nome":"Publicação","dataHora":"2021-06-29T07:50:49.000Z"},{"complementosTabelados":[{"codigo":19,"valor":57,"nome":"Petição (outras)","descricao":"tipo_de_peticao"}],"codigo":85,"nome":"Petição","dataHora":"2021100  9919    0  9876  100    43  28055    122 --:--:-- --:--:-- --:--:-- 28178
+* Connection #0 to host api-publica.datajud.cnj.jus.br left intact
+-07-28T21:45:24.000Z"},{"complementosTabelados":[{"codigo":19,"valor":57,"nome":"Petição (outras)","descricao":"tipo_de_peticao"}],"codigo":85,"nome":"Petição","dataHora":"2021-07-28T21:45:49.000Z"},{"complementosTabelados":[{"codigo":3,"valor":5,"nome":"para despacho","descricao":"tipo_de_conclusao"}],"codigo":51,"nome":"Conclusão","dataHora":"2021-07-29T11:31:53.000Z"},{"complementosTabelados":[{"codigo":3,"valor":6,"nome":"para decisão","descricao":"tipo_de_conclusao"}],"codigo":51,"nome":"Conclusão","dataHora":"2021-08-02T16:07:38.000Z"},{"codigo":12164,"nome":"Outras Decisões","dataHora":"2021-08-02T22:23:30.000Z"},{"complementosTabelados":[{"codigo":4,"valor":107,"nome":"Certidão","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2021-08-03T14:31:40.000Z"},{"complementosTabelados":[{"codigo":18,"valor":40,"nome":"outros motivos","descricao":"motivo_da_remessa"}],"codigo":123,"nome":"Remessa","dataHora":"2021-08-04T08:03:57.000Z"},{"codigo":92,"nome":"Publicação","dataHora":"2021-08-05T08:07:56.000Z"},{"codigo":11383,"nome":"Ato ordinatório","dataHora":"2021-12-09T01:38:07.000Z"},{"codigo":11383,"nome":"Ato ordinatório","dataHora":"2022-04-12T17:01:54.000Z"},{"codigo":246,"nome":"Definitivo","dataHora":"2022-06-13T10:39:28.000Z"},{"complementosTabelados":[{"codigo":4,"valor":80,"nome":"Outros documentos","descricao":"tipo_de_documento"}],"codigo":60,"nome":"Expedição de documento","dataHora":"2022-06-15T09:45:06.000Z"}],"id":"TJSP_G1_10067057520208260590","nivelSigilo":0,"orgaoJulgador":{"codigo":9713,"nome":"02 CUMULATIVA DE ITANHAEM"},"assuntos":[{"codigo":8893,"nome":"Atos Processuais"}]}}]}}
