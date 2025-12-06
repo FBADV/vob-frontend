@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { VOBLogoCompact } from './Logo';
+import { VOBLogoLarge } from './Logo';
 
 interface SplashScreenProps {
     onFinish: () => void;
@@ -62,8 +62,8 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
 
                 {/* Logo Container */}
                 <div className={`transform transition-all duration-1000 cubic-bezier(0.34, 1.56, 0.64, 1) ${step >= 1 ? 'scale-100 opacity-100 translate-y-0' : 'scale-50 opacity-0 translate-y-10'}`}>
-                    <div className="mb-8 transform scale-150">
-                        <VOBLogoCompact size="large" animated={true} />
+                    <div className="mb-8 transform scale-[2.5]">
+                        <VOBLogoLarge animated={true} />
                     </div>
                 </div>
 
